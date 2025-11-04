@@ -266,3 +266,48 @@ document.addEventListener('visibilitychange', () => {
         console.log('Game paused - tab not active');
     }
 });
+
+// Game Manager untuk handle rewards
+class GameManager {
+    constructor() {
+        this.bonusPoints = 0;
+        this.totalScore = 0;
+    }
+    
+    addBonusPoints(points) {
+        this.bonusPoints += points;
+        this.totalScore += points;
+        this.updateBonusDisplay();
+    }
+    
+    updateBonusDisplay() {
+        // Bisa tambah display untuk bonus points
+        console.log(`Bonus Points: ${this.bonusPoints}, Total Score: ${this.totalScore}`);
+    }
+}
+
+// Initialize game manager
+const gameManager = new GameManager();
+window.gameManager = gameManager;
+
+// ... (rest of your existing game code) ...
+
+// Di bagian event listeners, tambah reward button
+document.addEventListener('DOMContentLoaded', function() {
+    initGame();
+    
+    // Reward button event
+    document.getElementById('reward-btn').addEventListener('click', function() {
+        showRewardAd();
+    });
+});
+
+// Di function checkGameEnd(), update bagian interstitial:
+if (currentPlayer === 'X') {
+    scores.player++;
+    statusDisplay.textContent = 'You win! 🎉';
+    // Trigger interstitial setiap menang
+    setTimeout(() => {
+        showInterstitialAd();
+    }, 1000);
+}
