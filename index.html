@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Telegram Mini App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Monetag Script -->
+    <script src="https://s.monetag.net/api/?a=YOUR_PUBLISHER_ID"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⭕ Tic Tac Toe ❌</h1>
+            <div class="score-board">
+                <div class="score">Player: <span id="player-score">0</span></div>
+                <div class="score">AI: <span id="ai-score">0</span></div>
+            </div>
+        </header>
+
+        <div class="game-board" id="game-board">
+            <!-- Board akan di-generate oleh JavaScript -->
+        </div>
+
+        <div class="controls">
+            <button id="reset-btn">🔄 Reset Game</button>
+            <button id="new-game-btn">🎮 New Game</button>
+        </div>
+
+        <div class="ad-container">
+            <div id="banner-ad"></div>
+        </div>
+
+        <div class="game-info">
+            <p id="status">Your turn! Click a cell to start</p>
+        </div>
+    </div>
+
+    <script src="monetag-ads.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
