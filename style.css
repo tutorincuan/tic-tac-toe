@@ -159,3 +159,24 @@ button:hover {
         min-height: 80px;
     }
 }
+
+/* Tambah di style.css */
+#reward-btn {
+    background: linear-gradient(135deg, #ff9a00, #ff6a00);
+    color: white;
+}
+
+#reward-btn:hover {
+    background: linear-gradient(135deg, #ff8a00, #ff5a00);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3);
+}
+
+.bonus-indicator {
+    background: rgba(255, 215, 0, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #ffd700;
+    font-weight: bold;
+    margin-top: 10px;
+}
